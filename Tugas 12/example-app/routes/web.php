@@ -17,4 +17,8 @@ Route::get('/',[HomeController::class,'utama']);
 
 Route::get('/register',[HomeController::class,'reg']);
 
-Route::get('/kirim',[HomeController::class,'kirim']);
+Route::post('/kirim',[HomeController::class,'kirim']);
+
+Route::get('/master', function(){
+    return view('layout.master');
+});
